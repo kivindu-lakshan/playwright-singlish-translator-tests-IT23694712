@@ -9,10 +9,11 @@ import openpyxl
 from openpyxl.cell.cell import MergedCell
 
 # Configuration
-ROOT_DIR = Path(__file__).resolve().parent
+ROOT_DIR = Path(__file__).resolve().parent.parent
+TESTS_DIR = ROOT_DIR / "test_automation"
 
 DEFAULT_EXCEL_CANDIDATES = [
-    str(ROOT_DIR / "Assignment 1 - Test cases.xlsx"),
+    str(TESTS_DIR / "Assignment 1 - Test cases.xlsx"),
 ]
 
 DEFAULT_SHEET_NAME = " Test cases"
@@ -79,6 +80,9 @@ def _resolve_path(p: str | None) -> str | None:
     root_candidate = (ROOT_DIR / path).resolve()
     if root_candidate.exists():
         return str(root_candidate)
+    tests_candidate = (TESTS_DIR / path).resolve()
+    if tests_candidate.exists():
+        return str(tests_candidate)
     return str(root_candidate)
 
 def _normalize_header(value) -> str:
