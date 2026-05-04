@@ -2,6 +2,8 @@
 
 **Student ID:** IT23694712
 
+Repository: https://github.com/kivindu-lakshan/playwright-singlish-translator-tests-IT23694712.git
+
 ## Overview
 
 This project implements automated negative testing for a Sinhala transliteration chat translator using **Playwright** browser automation. It tests the conversion of Singlish (romanized Sinhala) to standard Sinhala Unicode characters.
